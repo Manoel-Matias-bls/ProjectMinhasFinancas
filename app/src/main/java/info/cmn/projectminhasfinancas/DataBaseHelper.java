@@ -4,6 +4,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.Date;
+
 public class DataBaseHelper extends SQLiteOpenHelper {
 
     public static String TABLE_NAME = "Usuarios"; // nome da tabela do banco de dados
