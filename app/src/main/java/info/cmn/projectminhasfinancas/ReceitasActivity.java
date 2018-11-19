@@ -11,8 +11,6 @@ import android.widget.EditText;
 
 import org.w3c.dom.Text;
 
-import java.util.Date;
-
 public class ReceitasActivity extends AppCompatActivity {
 
     DataBaseHelper helper;
@@ -26,18 +24,18 @@ public class ReceitasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_receitas);
 
-        valor = findViewById(R.id.valorReceita);
-        data =  findViewById(R.id.data);
-        descricao = findViewById(R.id.descricao);
-        categoria = findViewById(R.id.categoria);
-        salvar = findViewById(R.id.salvar);
-
-        salvar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                salvarReceita(valor.getText().toString(), data.getData(), descricao.getData(), categoria.getText().toString());
-            }
-        });
+//        valor = findViewById(R.id.valorReceita);
+//        data =  findViewById(R.id.data);
+//        descricao = findViewById(R.id.descricao);
+//        categoria = findViewById(R.id.categoria);
+//        salvar = findViewById(R.id.salvar);
+//
+//        salvar.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                salvarReceita(valor.getText().toString(), data.getData(), descricao.getData(), categoria.getText().toString());
+//            }
+//        });
 
 
     }
