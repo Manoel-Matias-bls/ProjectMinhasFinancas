@@ -12,6 +12,13 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static String COLUMN_NAME_LOGIN = "login";
     public static String COLUMN_NAME_SENHA = "senha";
 
+    public static String TABLE_NAME_RC = "Receitas"; // nome da tabela do banco de dados
+    public static String COLUMN_NAME_VALOR = "valor";
+    public static String COLUMN_NAME_DATA = "data";
+    public static String COLUMN_NAME_DESCRICAO = "descricao";
+    public static String COLUMN_NAME_CATEGORIA = "categoria";
+
+
     // SQL completa
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + TABLE_NAME + " (" +

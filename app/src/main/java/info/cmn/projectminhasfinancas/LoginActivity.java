@@ -32,7 +32,8 @@ public class LoginActivity extends AppCompatActivity {
 
                 if(login(usuario.getText().toString(), senha.getText().toString())) {
                     Log.d("Cursor", "Login bem sucedido");
-                    startActivity(new Intent(getBaseContext(), MenuActivity.class));
+                    startActivity(new Intent(getBaseContext(), MainCalendarActivity.class));
+//                    startActivity(new Intent(getBaseContext(), MenuActivity.class));
                     //Toast.makeText(this, "Login bem sucedido", Toast.LENGTH_LONG).show();
                 }else
                     Log.d("Cursor", "Login falhou");

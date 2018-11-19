@@ -20,6 +20,10 @@
         <activity android:name="info.cmn.projectminhasfinancas.LoginActivity" />
         <activity android:name="info.cmn.projectminhasfinancas.MenuActivity" />
         <activity android:name="info.cmn.projectminhasfinancas.ReceitasActivity"></activity>
+
+        <activity android:name="info.cmn.projectminhasfinancas.myCalendarView" />
+        <activity android:name="info.cmn.projectminhasfinancas.MainCalendarActivity" />
+
     </application>
 
 </manifest>
