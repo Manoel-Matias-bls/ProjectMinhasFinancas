@@ -1,8 +1,7 @@
 package info.cmn.projectminhasfinancas;
 
-import android.annotation.SuppressLint;
 import android.content.ContentValues;
-import android.database.Cursor;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -17,7 +16,6 @@ public class ReceitasActivity extends AppCompatActivity {
     EditText valor,categoria, data, descricao;
     Button salvar;
 
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,28 +30,28 @@ public class ReceitasActivity extends AppCompatActivity {
         salvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                salvarReceita(valor.getText().toString(), data.getText().toString(), descricao.getText().toString(), categoria.getText().toString());
+                salvarReceita();
+                startActivity(new Intent(getBaseContext(), ListarRecActivity.class));
             }
         });
 
 
     }
 
-    public void salvarReceita(String valores, String date, String descricao, String categoria)
+    public void salvarReceita()
     {
+        helper = new DataBaseHelper(this);
         SQLiteDatabase db = helper.getWritableDatabase();
 
-        Double valor = Double.parseDouble(valores);
-        //Date data = new Date(date);
-
         ContentValues values = new ContentValues();
-        values.put(DataBaseHelper.COLUMN_NAME_VALOR, valor);
-        values.put(DataBaseHelper.COLUMN_NAME_DATA, date);
-        values.put(DataBaseHelper.COLUMN_NAME_DESCRICAO, descricao);
-        values.put(DataBaseHelper.COLUMN_NAME_CATEGORIA, categoria);
+        values.put(DataBaseHelper.COLUMN_NAME_TIPO_OP, "receita");
+        values.put(DataBaseHelper.COLUMN_NAME_VALOR, valor.getText().toString());
+        values.put(DataBaseHelper.COLUMN_NAME_DATA, data.getText().toString());
+        values.put(DataBaseHelper.COLUMN_NAME_DESCRICAO, descricao.getText().toString());
+        values.put(DataBaseHelper.COLUMN_NAME_CATEGORIA, categoria.getText().toString());
 
         // Realiza a inserção dos dados e retorna o ID do elemento inserido
-        long newId = db.insert(DataBaseHelper.TABLE_NAME_RC,null, values);
+        long newId = db.insert(DataBaseHelper.TABLE_NAME_OP,null, values);
 
         // Retorna -1 caso não tenha dado certo a inserção
         if (newId != -1)
