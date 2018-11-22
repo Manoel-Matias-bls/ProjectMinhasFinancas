@@ -22,11 +22,18 @@ public class ListarRecActivity extends AppCompatActivity {
 
         mListView = findViewById(R.id.lista);
 
+        listarReceitas();
+
+    }
+
+    public void listarReceitas()
+    {
         helper = new DataBaseHelper(this);
 
         SQLiteDatabase db = helper.getReadableDatabase();
 
         String[] camposBD = {
+                DataBaseHelper._ID_OP,
                 DataBaseHelper.COLUMN_NAME_VALOR,
                 DataBaseHelper.COLUMN_NAME_DATA,
                 DataBaseHelper.COLUMN_NAME_DESCRICAO
@@ -38,10 +45,11 @@ public class ListarRecActivity extends AppCompatActivity {
 
         ArrayList<Receita> receitas = new ArrayList<>();
         while (cursor.moveToNext()) {
+            Integer id = cursor.getInt(cursor.getColumnIndex("id"));
             String valor = cursor.getString(cursor.getColumnIndex("valor"));
             String data = cursor.getString(cursor.getColumnIndex("data"));
             String descricao = cursor.getString(cursor.getColumnIndex("descricao"));
-            receitas.add(new Receita(valor, data, descricao));
+            receitas.add(new Receita(id, valor, data, descricao));
         }
 
         // Criar o adapter para listar os dados
@@ -51,5 +59,6 @@ public class ListarRecActivity extends AppCompatActivity {
         // associa o Adapter a ListView
         mListView.setAdapter(adapter);
     }
+
 }
 

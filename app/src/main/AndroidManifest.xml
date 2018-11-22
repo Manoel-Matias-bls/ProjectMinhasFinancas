@@ -20,9 +20,8 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".ReceitasActivity" />
-        <activity android:name=".myCalendarView" />
-        <activity android:name=".MainCalendarActivity" />
-        <activity android:name=".ListarRecActivity"></activity>
+        <activity android:name=".ListarRecActivity" />
+        <activity android:name=".DeleteRecActivity"></activity>
     </application>
 
 </manifest>

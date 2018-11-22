@@ -13,13 +13,32 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        Button btReceitas = (Button) findViewById(R.id.btReceitas);
+        Button btAdicionar = (Button) findViewById(R.id.btAdicionar);
+        Button btListar = (Button) findViewById(R.id.btListar);
+        Button btExcluir = (Button) findViewById(R.id.btExcluir);
 
-        btReceitas.setOnClickListener(new View.OnClickListener() {
+
+        btAdicionar.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getBaseContext(), ReceitasActivity.class));
+            }
+        });
+
+        btListar.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), ListarRecActivity.class));
+            }
+        });
+
+        btExcluir.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getBaseContext(), DeleteRecActivity.class));
             }
         });
 

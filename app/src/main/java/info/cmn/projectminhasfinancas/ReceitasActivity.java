@@ -35,7 +35,6 @@ public class ReceitasActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
     public void salvarReceita()

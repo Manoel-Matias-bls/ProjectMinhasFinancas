@@ -14,7 +14,8 @@ public class Receita implements Serializable {
     private String categoria;
 
 
-    public Receita(String valor, String data, String descricao) {
+    public Receita(int id, String valor, String data, String descricao) {
+        this.id = id;
         this.valor = valor;
         this.data = data;
         this.descricao = descricao;
@@ -74,5 +75,10 @@ public class Receita implements Serializable {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
+    }
+
+    @Override
+    public String toString() {
+        return "Id: "+ getId()+ "\nData: "+getData()+ "\nValor: "+getValor()+ "\nDescrição: "+getDescricao();
     }
 }

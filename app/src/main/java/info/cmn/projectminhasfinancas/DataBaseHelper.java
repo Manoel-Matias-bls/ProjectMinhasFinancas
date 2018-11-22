@@ -71,5 +71,4 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         onCreate(_db);
     }
 
-
 }

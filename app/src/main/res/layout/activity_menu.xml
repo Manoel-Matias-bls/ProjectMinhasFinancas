@@ -19,7 +19,29 @@
             android:layout_height="wrap_content"
             android:text="RECEITAS"
             android:textColor="@android:color/holo_green_dark"
+            android:textSize="30sp"
             android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btAdicionar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="adicionar"
+            android:textColor="@android:color/holo_green_dark" />
+
+        <Button
+            android:id="@+id/btListar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="listar"
+            android:textColor="@android:color/holo_green_dark" />
+
+        <Button
+            android:id="@+id/btExcluir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="excluir"
+            android:textColor="@android:color/holo_green_dark" />
 
         <Button
             android:id="@+id/btDespesas"
@@ -27,7 +49,29 @@
             android:layout_height="wrap_content"
             android:text="DESPESAS"
             android:textColor="@android:color/holo_red_dark"
+            android:textSize="30sp"
             android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btAddDep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="adicionar"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <Button
+            android:id="@+id/btListDep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="listar"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <Button
+            android:id="@+id/btExDep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="excluir"
+            android:textColor="@android:color/holo_red_dark" />
 
     </LinearLayout>
 
